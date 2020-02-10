@@ -4,7 +4,8 @@ spring:
   profiles:
     active:
       - secure
-
+  redis:
+    host: localhost
 
 # tag::configuration-eureka[]
 eureka:   #<1>
@@ -16,7 +17,7 @@ eureka:   #<1>
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:28888/}/eureka/
 
 management:
   endpoints:
